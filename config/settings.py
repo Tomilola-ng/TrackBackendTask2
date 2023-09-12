@@ -1,3 +1,4 @@
+import dj_database_url
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,10 +55,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('postgres://hngx_trackbackend_task2_postgres_user:uCNeD9hTPfLlE5eqDIdt3wfTszWDhD9l@dpg-ck0cbepau56s73cbsj60-a.oregon-postgres.render.com/hngx_trackbackend_task2_postgres')
 }
 
 
@@ -86,8 +84,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # My Settings 
 CORS_ALLOW_ALL_ORIGINS = True
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_RENDERER_CLASSES': [
-#         'rest_framework.renderers.JSONRenderer',
-#     ],
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+}
