@@ -6,6 +6,7 @@ from api.views import PersonListCreateView, PersonRetrieveUpdateDestroyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', PersonListCreateView.as_view(), name='person-list-create'),
     path('api/', PersonListCreateView.as_view(), name='person-list-create'),
     path('api/<int:pk>/', PersonRetrieveUpdateDestroyView.as_view(), name='person-detail'),
 ]
