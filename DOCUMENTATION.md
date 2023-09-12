@@ -87,7 +87,7 @@ operations on individuals' data.
 Here are some example API requests:
 - Create a new person:
 ```http
-POST http://localhost:8000/api
+POST https://hngx-backend-track-task2.onrender.com/api
 Content-Type: application/json
 {
 "name": "John Doe",
@@ -96,11 +96,11 @@ Content-Type: application/json
 ```
 - Retrieve details of a person:
 ```http
-GET http://localhost:8000/api/1
+GET https://hngx-backend-track-task2.onrender.com/api/2
 ```
 - Update details of a person:
 ```http
-PUT http://localhost:8000/api/1
+PUT https://hngx-backend-track-task2.onrender.com/api/2
 Content-Type: application/json
 {
 "name": "Updated John Doe",
@@ -109,7 +109,7 @@ Content-Type: application/json
 ```
 - Remove a person:
 ```http
-DELETE http://localhost:8000/api/1
+DELETE https://hngx-backend-track-task2.onrender.com/api/2
 ```
 ## Limitations
 - This API is a simple example and may not cover all possible use cases.
